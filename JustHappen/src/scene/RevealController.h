@@ -39,6 +39,15 @@
 @class MyTabBarViewController;
 @class RearViewController;
 
-@interface RevealController : ZUUIRevealController <ZUUIRevealControllerDelegate>
+#define FRONTVIEW_TABVIEW 0
+#define FRONTVIEW_MANAGEACCOUNT 1
+#define FRONTVIEW_NOTIFICATION 2
+#define FRONTVIEW_SETTING 3
+#define FRONTVIEW_ABOUT 4
 
+@interface RevealController : ZUUIRevealController <ZUUIRevealControllerDelegate>
+{
+}
+
+@property (readwrite, nonatomic) NSInteger FrontViewStage;
 @end

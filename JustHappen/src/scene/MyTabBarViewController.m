@@ -22,6 +22,7 @@
 
 -(void)setupNavBar{
 
+    //pond edit
     UIViewController* par = self.navigationController.parentViewController;
     NSLog(@"Parent is %@",[par class]);
 	if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && 
@@ -55,6 +56,7 @@
         }
 
 	}
+    
 }
 
 - (void)viewDidUnload

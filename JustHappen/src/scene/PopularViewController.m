@@ -37,7 +37,39 @@
     
     [_JHAppDelegate ASIHttpRequest_GetPopularViewController:self];
     
+    // Create a containing view to position the button
+    {
+        UIImage* barButtonImage = [UIImage imageNamed:@"button_menu_b.png"];
+        float offsetX = 5;
+        UIView *containingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, barButtonImage.size.width + offsetX, barButtonImage.size.height)];
+        
+        // Create a custom button with the image
+        UIButton *barUIButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [barUIButton setImage:barButtonImage forState:UIControlStateNormal];
+        barUIButton.frame = CGRectMake(offsetX, 0, barButtonImage.size.width, barButtonImage.size.height);
+        [barUIButton addTarget:self
+                        action:@selector(revealToggle:)
+              forControlEvents:UIControlEventTouchUpInside];
+        
+        [containingView addSubview:barUIButton];
+        
+        // Create a container bar button
+        UIBarButtonItem *containingBarButton = [[UIBarButtonItem alloc] initWithCustomView:containingView];
+        
+        // Add the container bar button
+        self.navigationItem.rightBarButtonItem = containingBarButton;
+        self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navibar_justhappen.png"]];
+    }
+    //	}
 }
+
+- (void)revealToggle:(id)sender
+{
+    NSLog(@"reveal toggle");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"REVEAL_MENU" object:Nil];
+    
+}
+
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];

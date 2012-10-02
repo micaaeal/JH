@@ -1263,7 +1263,7 @@ enum{
         JHNavController *navigationController = [[JHNavController alloc] initWithRootViewController:myTabBarCtrl]; 
 
         UIViewController *rearViewController = [[RearViewController alloc]init];
-        RevealController *revealController = [[RevealController alloc] initWithFrontViewController:navigationController rearViewController:rearViewController];
+        RevealController *revealController = [[RevealController alloc] initWithFrontViewController:myTabBarCtrl rearViewController:rearViewController];
         
         self.myTabBarController = myTabBarCtrl;
         self.revealViewController = revealController;
@@ -1274,9 +1274,9 @@ enum{
         self.window.rootViewController = self.revealViewController;
         [self.window makeKeyAndVisible];
         
-        [self.myTabBarController setupNavBar];   
+        //[self.myTabBarController setupNavBar];
         
-        self.myTabBarController.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navibar_justhappen.png"]];
+        //self.myTabBarController.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navibar_justhappen.png"]];
         
     }
     

@@ -40,8 +40,13 @@
 #import "CommentViewController.h"
 
 @implementation RevealController
+@synthesize FrontViewStage;
 
 #pragma mark - Initialization
+
+- (void) OrdertoReveal{
+    [self revealToggle:self];
+}
 
 - (id)initWithFrontViewController:(UIViewController *)aFrontViewController rearViewController:(UIViewController *)aBackViewController
 {
@@ -50,6 +55,9 @@
 	if (nil != self)
 	{
 		self.delegate = self;
+        FrontViewStage = FRONTVIEW_TABVIEW;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OrdertoReveal) name:@"REVEAL_MENU" object:Nil];
 	}
 	
 	return self;

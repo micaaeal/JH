@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-732" y="1028"/>
         </scene>
-        <!--Navigation Controller - Follower Tile-->
+        <!--Nav Controller - Follower Tile-->
         <scene sceneID="uu7-LS-Ecj">
             <objects>
-                <navigationController definesPresentationContext="YES" id="9UF-7S-9my" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="9UF-7S-9my" customClass="JHNavController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Follower Tile" image="tabmenu_icon_follower.png" id="YRO-Hb-y8m"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="dRz-ad-Kke">
                         <autoresizingMask key="autoresizingMask"/>
@@ -217,7 +217,7 @@
             <objects>
                 <tableViewController id="FMH-GZ-sjr" customClass="MedalViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="w8X-c4-JJw">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -322,12 +322,12 @@
             </objects>
             <point key="canvasLocation" x="1877" y="3501"/>
         </scene>
-        <!--User List View Controller - Users-->
+        <!--User List View Controller-->
         <scene sceneID="ndL-7i-kDZ">
             <objects>
                 <tableViewController id="t3c-A1-Y7n" customClass="UserListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="41" sectionHeaderHeight="22" sectionFooterHeight="22" id="bSx-rk-air">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -358,18 +358,18 @@
                             <outlet property="delegate" destination="t3c-A1-Y7n" id="QMU-ej-Ynt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Users" id="KYZ-3p-XyC"/>
+                    <navigationItem key="navigationItem" id="KYZ-3p-XyC"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U07-1u-v8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1209" y="4243"/>
         </scene>
-        <!--Search User View Controller - Search User-->
+        <!--Search User View Controller-->
         <scene sceneID="Mz0-L4-pdj">
             <objects>
                 <tableViewController id="g6c-Ug-LOa" customClass="SearchUserViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FbI-VP-3p3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" text="" id="BWQ-Gz-Isj">
@@ -385,7 +385,7 @@
                             <outlet property="delegate" destination="g6c-Ug-LOa" id="ZFr-DX-TSy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search User" id="K8b-fl-aNj"/>
+                    <navigationItem key="navigationItem" id="K8b-fl-aNj"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="GUo-Xz-mqO" id="Smg-ag-ech"/>
                         <segue destination="mg4-9V-hsz" kind="push" identifier="SearchAccountSegue" id="csK-eQ-2CM"/>
@@ -772,7 +772,7 @@
             </objects>
             <point key="canvasLocation" x="-70" y="2335"/>
         </scene>
-        <!--Popular View Controller - Poppular-->
+        <!--Popular View Controller-->
         <scene sceneID="IEe-oQ-fpP">
             <objects>
                 <tableViewController id="tMx-bw-veq" customClass="PopularViewController" sceneMemberID="viewController">
@@ -1053,7 +1053,7 @@
                             <outlet property="delegate" destination="tMx-bw-veq" id="4wR-Qg-rgn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Poppular" id="gEE-mC-iUk"/>
+                    <navigationItem key="navigationItem" id="gEE-mC-iUk"/>
                     <connections>
                         <segue destination="SCp-47-zjl" kind="push" identifier="segueAll" id="X90-hR-mVP"/>
                         <segue destination="mg4-9V-hsz" kind="push" identifier="seguePopularAccount" id="AcH-Di-fKT"/>
@@ -1063,7 +1063,7 @@
             </objects>
             <point key="canvasLocation" x="422" y="2343"/>
         </scene>
-        <!--Popular List View Controller - PopularList-->
+        <!--Popular List View Controller-->
         <scene sceneID="X0t-Xi-8Sc">
             <objects>
                 <tableViewController id="SCp-47-zjl" customClass="PopularListViewController" sceneMemberID="viewController">
@@ -1099,7 +1099,7 @@
                             <outlet property="delegate" destination="SCp-47-zjl" id="YyZ-ZH-vEK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PopularList" id="Yka-bS-C1k"/>
+                    <navigationItem key="navigationItem" id="Yka-bS-C1k"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4o-xf-VuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1310,11 +1310,11 @@
             <objects>
                 <tableViewController id="UUy-vO-qfk" customClass="DetailViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="406" sectionHeaderHeight="22" sectionFooterHeight="22" id="4OL-ma-4x4">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="KPI-qS-pzU">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="397"/>
+                            <rect key="frame" x="0.0" y="19" width="320" height="397"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="category_icon_all.png" id="Db3-T2-Ebi">
@@ -1432,14 +1432,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf1-J4-3Qj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="348"/>
+            <point key="canvasLocation" x="1778" y="342"/>
         </scene>
         <!--Comment View Controller - Comments-->
         <scene sceneID="5Ux-ek-6xP">
             <objects>
                 <tableViewController id="wtN-st-K4t" customClass="CommentViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="K38-06-EBB">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -1513,12 +1513,12 @@
             </objects>
             <point key="canvasLocation" x="2238" y="348"/>
         </scene>
-        <!--Account View Controller - Follower Tile-->
+        <!--Account View Controller-->
         <scene sceneID="zxM-DP-bIM">
             <objects>
                 <tableViewController storyboardIdentifier="TileAccountController" id="mg4-9V-hsz" customClass="AccountViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="160" sectionHeaderHeight="22" sectionFooterHeight="22" id="N3y-Rh-Ryn">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="e1u-9x-M1P">
@@ -1607,15 +1607,15 @@
                         </prototypes>
                         <sections/>
                     </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Follower Tile" id="OVc-YA-6Le">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="DYv-rq-w3c">
+                    <toolbarItems>
+                        <barButtonItem systemItem="search" id="DYv-rq-w3c">
                             <connections>
                                 <segue destination="g6c-Ug-LOa" kind="push" identifier="SearchUserSegue" id="t2i-0Z-QT1"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="OVc-YA-6Le"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <connections>
                         <outlet property="btnFollow" destination="YpW-CA-3rL" id="o22-4P-Bdh"/>
                         <outlet property="lblFollower" destination="PlL-66-UHe" id="CR5-qt-yTu"/>
@@ -1658,148 +1658,14 @@
         <image name="tabmenu_icon_map.png" width="20" height="20"/>
         <image name="tabmenu_icon_popular.png" width="20" height="20"/>
     </resources>
-    <classes>
-        <class className="AboutViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
-        </class>
-        <class className="AccountViewController" superclassName="TilesController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccountViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="btnFollow" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="lblFollower" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblFollowing" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblMedal" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="segment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="userAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="userInAppPhoto" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="userName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BeforeNewEventViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BeforeNewEventViewController.h"/>
-        </class>
-        <class className="CategoryPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryPickerViewController.h"/>
-        </class>
-        <class className="CommentViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CommentViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="commentTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="CreateEventViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateEventViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="btnCategory" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnPlace" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cameraRollButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="detailTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="DetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="categoryView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="likeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="placeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="userName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="userPhoto" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="ManageAccountViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ManageAccountViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="userAddress" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userSurname" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="userLocTapped:"/>
-                <relationship kind="outlet" name="buttonView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="MedalCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MedalCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="view1" candidateClass="UIView"/>
-                <relationship kind="outlet" name="view2" candidateClass="UIView"/>
-                <relationship kind="outlet" name="view3" candidateClass="UIView"/>
-                <relationship kind="outlet" name="view4" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="MedalViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MedalViewController.h"/>
-        </class>
-        <class className="MyTabBarViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTabBarViewController.h"/>
-        </class>
-        <class className="NotificationViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NotificationViewController.h"/>
-        </class>
-        <class className="PopularCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PopularCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="follow1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="follow2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="follow3" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="follow4" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imgIcon" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imgPreview1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imgPreview2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imgPreview3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imgPreview4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PopularListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PopularListViewController.h"/>
-        </class>
-        <class className="PopularViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PopularViewController.h"/>
-        </class>
-        <class className="SearchUserViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchUserViewController.h"/>
-        </class>
-        <class className="SettingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="btnSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="TileCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TileCell.h"/>
-        </class>
-        <class className="TilesController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TilesController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshTapped:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="buttonView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-            </relationships>
-        </class>
-        <class className="UserListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserListViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0Ar-EK-4H9"/>
         <segue reference="6j3-Ca-7I2"/>
-        <segue reference="gtH-Ck-Gnf"/>
+        <segue reference="FC1-HP-k9F"/>
+        <segue reference="j6c-Fz-DH9"/>
     </inferredMetricsTieBreakers>
 </document>

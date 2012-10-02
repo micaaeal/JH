@@ -209,11 +209,11 @@
     if (_isSearching && tableView == self.searchDisplayController.searchResultsTableView) {
         
         //MAIN APP / PROFILE
-        if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] && 
-            ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[MyTabBarViewController class]])
-        {
-            UINavigationController* navCtrl = _delegate.navController;
-            [_revealController setFrontViewController:navCtrl animated:NO];
+        //if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] &&
+        //    ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[MyTabBarViewController class]])
+        if ([_revealController FrontViewStage] != FRONTVIEW_TABVIEW) {
+            //UINavigationController* navCtrl = _delegate.navController;
+            [_revealController setFrontViewController:_delegate.myTabBarController animated:NO];
         }
         else
         {
@@ -226,6 +226,9 @@
         AccountViewController* accView = (AccountViewController*)[nav.viewControllers objectAtIndex:0];
         [accView openPageForUser:[_searchResultArray objectAtIndex:indexPath.row]];
 
+        
+        [_revealController setFrontViewStage:FRONTVIEW_TABVIEW];
+        
         return;
     }
 
@@ -233,11 +236,12 @@
         if (indexPath.row == 0)
         {
             //MAIN APP / PROFILE
-            if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] && 
-                ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[MyTabBarViewController class]])
-            {
-                UINavigationController* navCtrl = _delegate.navController;
-                [_revealController setFrontViewController:navCtrl animated:NO];
+            //if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] &&
+            //    ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[MyTabBarViewController class]])
+            
+            if ([_revealController FrontViewStage] != FRONTVIEW_TABVIEW) {
+                //UINavigationController* navCtrl = _delegate.navController;
+                [_revealController setFrontViewController:_delegate.myTabBarController animated:NO];
             }
             else
             {
@@ -245,6 +249,9 @@
             }
             
             //Point to ProfileAccount..
+            
+            [_revealController setFrontViewStage:FRONTVIEW_TABVIEW];
+            
             [_delegate.myTabBarController setSelectedIndex:3];
         }
     }
@@ -252,9 +259,9 @@
         if (indexPath.row == 0)
         {
             //MANAGE ACCOUNT
-            if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] && 
-                ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[ManageAccountViewController class]])
-            {
+            //if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] &&
+              //  ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[ManageAccountViewController class]])
+            if ([_revealController FrontViewStage] != FRONTVIEW_MANAGEACCOUNT) {
                 UINavigationController* navCtrl = (UINavigationController*)_delegate.manageAccountViewController;
                 [_revealController setFrontViewController:navCtrl animated:NO];
             }
@@ -262,13 +269,17 @@
             {
                 [_revealController revealToggle:self];
             }
+            
+            
+            [_revealController setFrontViewStage:FRONTVIEW_MANAGEACCOUNT];
         }
         else if (indexPath.row == 1)
         {
             //NOTIFICATION
-            if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] && 
-                ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[NotificationViewController class]])
-            {
+            //if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] &&
+                //![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[NotificationViewController class]])
+            if ([_revealController FrontViewStage] !=  FRONTVIEW_NOTIFICATION) {
+                
                 UINavigationController* navCtrl = (UINavigationController*)_delegate.notificationViewController;
                 [_revealController setFrontViewController:navCtrl animated:NO];
             }
@@ -276,15 +287,19 @@
             {
                 [_revealController revealToggle:self];
             }
+            
+            
+            [_revealController setFrontViewStage:FRONTVIEW_NOTIFICATION];
         }
     }
     else  if (indexPath.section == 2) {
         if (indexPath.row == 0)
         {
             //SETTING
-            if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] && 
-                ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[SettingViewController class]])
-            {
+            //if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] &&
+                //![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[SettingViewController class]])
+            if ([_revealController FrontViewStage] != FRONTVIEW_SETTING) {
+                
                 UINavigationController* navCtrl = (UINavigationController*)_delegate.settingViewController;
                 [_revealController setFrontViewController:navCtrl animated:NO];
             }
@@ -292,21 +307,29 @@
             {
                 [_revealController revealToggle:self];
             }
+            
+            
+            [_revealController setFrontViewStage:FRONTVIEW_SETTING];
         }
         else if (indexPath.row == 1)
         {
             
             //SET TO NORMAL SCENE!!!
-            if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] && 
-                ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[MyTabBarViewController class]])
-            {
-                UINavigationController* navCtrl = _delegate.navController;
-                [_revealController setFrontViewController:navCtrl animated:NO];
+            //if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] &&
+                //![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[MyTabBarViewController class]])
+            
+            if ([_revealController FrontViewStage] != FRONTVIEW_TABVIEW) {
+                
+                //UINavigationController* navCtrl = _delegate.navController;
+                [_revealController setFrontViewController:_delegate.myTabBarController animated:NO];
             }
             else
             {
                 [_revealController revealToggle:self];
             }
+            
+            
+            [_revealController setFrontViewStage:FRONTVIEW_TABVIEW];
             
             //Point to ProfileAccount..
             [_delegate.myTabBarController setSelectedIndex:3];
@@ -318,9 +341,10 @@
     }else  if (indexPath.section == 3) {
         
         //ABOUT
-        if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] && 
-            ![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[AboutViewController class]])
-        {
+        //if ([_revealController.frontViewController isKindOfClass:[UINavigationController class]] &&
+            //![((UINavigationController *)_revealController.frontViewController).topViewController isKindOfClass:[AboutViewController class]])
+        if ([_revealController FrontViewStage] != FRONTVIEW_ABOUT) {
+            
             UINavigationController* navCtrl = (UINavigationController*)_delegate.aboutViewController;
             [_revealController setFrontViewController:navCtrl animated:NO];
         }
@@ -328,6 +352,8 @@
         {
             [_revealController revealToggle:self];
         }
+        
+        [_revealController setFrontViewStage:FRONTVIEW_ABOUT];
     }
 }
 
